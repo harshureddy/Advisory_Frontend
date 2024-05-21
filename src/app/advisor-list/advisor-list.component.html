@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h2>Advisors</h2>
+    <button class="btn btn-primary mb-3" routerLink="/create-advisor">Add New Advisor</button>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>SIN</th>
+          <th>Health Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let advisor of advisors">
+          <td>{{ advisor.name }}</td>
+          <td>{{ advisor.sin }}</td>
+          <td>{{ advisor.healthStatus }}</td>
+          <td>
+            <button class="btn btn-info mr-2" routerLink="/edit-advisor/{{ advisor.id }}">Edit</button>
+            <button class="btn btn-danger" (click)="deleteAdvisor(advisor.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

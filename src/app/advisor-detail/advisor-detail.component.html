@@ -1,0 +1,12 @@
+<div *ngIf="advisor" class="container mt-5">
+    <h2>Advisor Details</h2>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ advisor.name }}</h5>
+        <p class="card-text"><strong>SIN:</strong> {{ advisor.sin }}</p>
+        <p class="card-text"><strong>Address:</strong> {{ advisor.address }}</p>
+        <p class="card-text"><strong>Phone:</strong> {{ advisor.phone }}</p>
+        <p class="card-text"><strong>Health Status:</strong> {{ advisor.healthStatus }}</p>
+      </div>
+    </div>
+  </div>
